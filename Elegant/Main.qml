@@ -13,7 +13,7 @@ Rectangle {
 
     readonly property int hMargin: 40
     readonly property int vMargin: 30
-    readonly property int m_powerButtonSize: 40
+    readonly property int m_powerButtonSize: 30
     readonly property color textColor: "#ffffff"
 
     TextConstants { id: textConstants }
@@ -148,32 +148,6 @@ Rectangle {
                 enabled: root.state == "stateLogin"
                 opacity: 0
                 transformOrigin: Item.Top
-            }
-        }
-
-        Item {
-            id: timeArea
-            visible: ! loginFrame.isProcessing
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-            }
-            width: parent.width / 3
-            height: parent.height / 5
-
-            Timer {
-                interval: 1000
-                repeat: true
-                running: true
-                onTriggered: {
-                    timeText.updateTime()
-                    dateText.updateDate()
-                }
-            }
-
-            Component.onCompleted: {
-                timeText.updateTime()
-                dateText.updateDate()
             }
         }
 
