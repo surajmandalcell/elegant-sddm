@@ -91,19 +91,6 @@ Item {
             radius: 3
             color: "#55000000"
             
-            Text {
-            id: userPasswdLabel
-            anchors {
-                top: userNameText.bottom
-                topMargin: 12
-                horizontalCenter: parent.horizontalCenter
-            }
-
-            text: (passwdInput.text.length < 1) ?  "Password" : " "
-            font.pointSize: 15
-            color: "#c1c1c1"
-    
-	        }
 
             TextInput {
                 id: passwdInput
@@ -113,7 +100,7 @@ Item {
                 clip: true
                 focus: true
                 color: textColor
-                font.pointSize: 15
+                font.pointSize: 10
                 selectByMouse: true
                 selectionColor: "#a8d6ec"
                 echoMode: TextInput.Password
