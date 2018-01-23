@@ -161,40 +161,6 @@ Rectangle {
             width: parent.width / 3
             height: parent.height / 5
 
-            Text {
-                id: timeText
-                anchors {
-                    left: parent.left
-                    leftMargin: hMargin
-                    bottom: dateText.top
-                    bottomMargin: 5
-                }
-
-                font.pointSize: 50
-                color: textColor
-
-                function updateTime() {
-                    text = new Date().toLocaleString(Qt.locale("en_US"), "hh:mm")
-                }
-            }
-
-            Text {
-                id: dateText
-                anchors {
-                    left: parent.left
-                    leftMargin: hMargin
-                    bottom: parent.bottom
-                    bottomMargin: vMargin
-                }
-
-                font.pointSize: 18
-                color: textColor
-
-                function updateDate() {
-                    text = new Date().toLocaleString(Qt.locale("en_US"), "yyyy-MM-dd dddd")
-                }
-            }
-
             Timer {
                 interval: 1000
                 repeat: true
