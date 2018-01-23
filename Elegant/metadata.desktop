@@ -1,13 +1,13 @@
 [SddmGreeterTheme]
-Name=Deepin
-Description=Deepin-like SDDM theme.
-Screenshot=screenshot.png
+Name=Elegant
+Description=Elegant-SddmGreeterTheme.
+Screenshot=preview.png
 License=CC-BY-SA
 Type=sddm-theme
 Version=1.0
-Screenshot=screenshot.png
+Screenshot=preview.png
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Theme-Id=deepin
+Theme-Id=Elegant
 Theme-API=2.0
