@@ -78,19 +78,6 @@ Item {
             font.pointSize: 15
         }
 
-        Text {
-            id: userPasswdLabel
-            anchors {
-                top: userNameText.bottom
-                topMargin: 12
-                horizontalCenter: parent.horizontalCenter
-            }
-
-            text: (passwdInput.text.length < 1) ?  "Password" : " "
-            color: textColor
-            font.pointSize: 15
-	    }
-
         Rectangle {
             id: passwdInputRec
             visible: ! isProcessing
@@ -99,10 +86,24 @@ Item {
                 topMargin: 10
                 horizontalCenter: parent.horizontalCenter
             }
-            width: 300
+            width: 260
             height: 35
             radius: 3
             color: "#55000000"
+            
+            Text {
+            id: userPasswdLabel
+            anchors {
+                top: userNameText.bottom
+                topMargin: 12
+                horizontalCenter: parent.horizontalCenter
+            }
+
+            text: (passwdInput.text.length < 1) ?  "Password" : " "
+            font.pointSize: 15
+            color: "#c1c1c1"
+    
+	        }
 
             TextInput {
                 id: passwdInput
