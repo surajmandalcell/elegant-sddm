@@ -6,11 +6,11 @@ SDDM is a Login Manager for Linux which can be themed by qml. This theme uses th
 ![screenshot](https://github.com/surajmandalcell/Elegant-sddm/blob/master/Elegant/preview.png?raw=true)
 
 ## Install
-1. `$git clone https://github.com/surajmandalcell/Elegant-sddm.git`
+1. `git clone https://github.com/surajmandalcell/Elegant-sddm.git`
 
-2. `$cd Elegant-sddm`
+2. `cd Elegant-sddm`
 
-3. `$./install.sh`
+3. `./install.sh`
 
 ## Note
 
