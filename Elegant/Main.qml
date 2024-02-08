@@ -80,7 +80,7 @@ Rectangle {
         Image {
             id: mainFrameBackground
             anchors.fill: parent
-            source: "background.jpg"
+            source: config.background
         }
 
         FastBlur {
