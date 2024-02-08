@@ -17,3 +17,6 @@ SDDM, a Linux Login Manager, supports theming through QML, allowing for custom d
 You should run the command below before install to test if all dependents was installed
 
 - `sddm-greeter --test-mode --theme Elegant/`
+
+## License
+DDE session ui is licensed under [GPL-3.0-or-later](LICENSE).
