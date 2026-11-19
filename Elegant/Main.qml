@@ -15,6 +15,8 @@ Rectangle {
     readonly property int vMargin: 30
     readonly property int m_powerButtonSize: 30
     readonly property color textColor: "#ffffff"
+    readonly property int blurRadius: config.blur_radius ? Number(config.blur_radius) : 30
+    readonly property int loginBlurRadius: config.blur_login === "true" ? blurRadius : 0
 
     TextConstants { id: textConstants }
 
@@ -25,7 +27,7 @@ Rectangle {
             PropertyChanges { target: powerFrame; opacity: 1}
             PropertyChanges { target: sessionFrame; opacity: 0}
             PropertyChanges { target: userFrame; opacity: 0}
-            PropertyChanges { target: bgBlur; radius: 30}
+            PropertyChanges { target: bgBlur; radius: blurRadius}
         },
         State {
             name: "stateSession"
@@ -33,7 +35,7 @@ Rectangle {
             PropertyChanges { target: powerFrame; opacity: 0}
             PropertyChanges { target: sessionFrame; opacity: 1}
             PropertyChanges { target: userFrame; opacity: 0}
-            PropertyChanges { target: bgBlur; radius: 30}
+            PropertyChanges { target: bgBlur; radius: blurRadius}
         },
         State {
             name: "stateUser"
@@ -41,7 +43,7 @@ Rectangle {
             PropertyChanges { target: powerFrame; opacity: 0}
             PropertyChanges { target: sessionFrame; opacity: 0}
             PropertyChanges { target: userFrame; opacity: 1}
-            PropertyChanges { target: bgBlur; radius: 30}
+            PropertyChanges { target: bgBlur; radius: blurRadius}
         },
         State {
             name: "stateLogin"
@@ -49,7 +51,7 @@ Rectangle {
             PropertyChanges { target: powerFrame; opacity: 0}
             PropertyChanges { target: sessionFrame; opacity: 0}
             PropertyChanges { target: userFrame; opacity: 0}
-            PropertyChanges { target: bgBlur; radius: 0}
+            PropertyChanges { target: bgBlur; radius: loginBlurRadius}
         }
 
     ]
@@ -87,7 +89,7 @@ Rectangle {
             id: bgBlur
             anchors.fill: mainFrameBackground
             source: mainFrameBackground
-            radius: 0
+            radius: loginBlurRadius
         }
 
         Item {
